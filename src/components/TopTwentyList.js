@@ -17,7 +17,7 @@ const TopTwentyList = (props) => {
         <table className='song-list' id='top-twenty'>
             <thead className='list-header'>
             <tr >
-                <th>Chart Position</th>
+                <th>Position</th>
                 <th>Title</th>
                 <th>Artist</th>
             </tr>
