@@ -4,15 +4,26 @@ import '../App.css';
 
 const TopTwentyList = (props) => {
 
-    if(!props.chartPositions) return null;
+    if (!props.chartPositions) return null;
 
     const artistDetails = props.chartPositions.map((song, index) => {
-        return <li key={index}>{index+1}: Title:{song['im:name'].label}, Artist: {song['im:artist'].label} </li>
+        return <tr key={index}>
+            <td>{index + 1}</td>
+            <td>{song['im:name'].label}</td>
+            <td> {song['im:artist'].label}</td>
+        </tr>
     })
     return (
-        <ul className='song-list' id='top-twenty'>
+        <table className='song-list' id='top-twenty'>
+            <thead className='list-header'>
+            <tr >
+                <th>Chart Position</th>
+                <th>Title</th>
+                <th>Artist</th>
+            </tr>
+            </thead>
             {artistDetails}
-        </ul>
+        </table>
     )
 }
 

@@ -30,3 +30,7 @@
 .song-list{
   list-style: none;
 }
+
+.list-header th{
+  text-align: left;
+}
